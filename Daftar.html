@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daftar</title>
+	<link rel="stylesheet" type="text/css" href="masuk.css">
+</head>
+<body style="padding-top: 2%">
+	<center><h2>DAFTAR</h2></center>
+	<div class="daftar">
+		<form action="index.html" method="POST" onSubmit="validasi()">
+			<div>
+				<label>Nama:</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label>Password:</label>
+				<input type="Password" name="Password" id="Password" />
+			</div>
+			<div>
+				<label>No HP:</label>
+				<input type="text" name="hp" id="hp" />
+			</div>
+			<div>
+				<label>Tanggal Lahir:</label>
+				<input type="date" name="tanggal_lahir" id="tanggal_lahir" />
+			</div>
+			<div>
+				<label>Alamat:</label>
+				<textarea></textarea>
+			</div>
+			<div>
+				<label>Kota:</label>
+				<input type="text" name="kota" id="kota" />
+			</div>
+			<div>
+				<label>Provinsi:</label>
+				<input type="text" name="provinsi" id="provinsi" />
+			</div>
+			<div>
+				<label>Jenis Kelamin:</label>
+				<input type="radio" name="jk" id="jk" />Laki-laki
+				<input type="radio" name="jk" id="jk" />Perempuan
+			</div>
+			<br>
+			<div>
+				<input type="submit" value="Masuk" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function validasi() {
+		var Password = document.getElementById("Password").value;
+		var email = document.getElementById("email").value;
+		if (Password != "" && email!="") {
+			alert('Anda harus mengisi data dengan lengkap !');
+		}else if(Password != "12345678" && email!="rizky@gmail.com"){
+			alert('Password atau email salah');
+		}
+		else{
+			return true;
+		}
+	}
+</script>
+
+</html>
